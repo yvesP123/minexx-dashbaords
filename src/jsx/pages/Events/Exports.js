@@ -159,7 +159,7 @@ const Exports = () => {
                                                         <td>{access === '3ts' ? _export.netWeight : (_export.netWeight/1000).toFixed(2)}</td>
                                                         <td>{_export.link ? <a target="_blank" href={`${_export.link}`} className="text-primary" rel="noreferrer">Track Shipment</a> : <span className="text-warning">Tracking not available</span>}</td>
                                                         <td>
-                                                        <QRCodeWithPrintButton value={`https://minexx-scann.vercel.app/export/${_export?.id}/?x-platform=${_export.mineral === 'Gold' ? 'gold' : '3ts'}`} />
+                                                           <QRCodeWithPrintButton value={`https://minexx-scann.vercel.app/export/${_export?.id}/${_export?.company?.id}/?x-platform=${_export.mineral === 'Gold' ? 'gold' : '3ts'}`} />
                                                         </td> 
                                                     </tr> 
                                                 ))}
